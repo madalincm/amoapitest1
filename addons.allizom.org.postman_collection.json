@@ -1,68 +1,167 @@
 {
-	"id": "21bb9920-c97e-493a-b03f-3278b9e3f3bb",
-	"name": "addons.allizom.org",
-	"description": "",
-	"auth": null,
-	"events": null,
-	"variables": [],
-	"order": [
-		"42bad0cc-75f1-4a76-b131-4b18fbd679be",
-		"aa43166c-9b6f-4881-acfe-dbf28cb5103d",
-		"2333a108-8160-4353-9f9b-d5cdf24af446"
-	],
-	"folders_order": [],
-	"folders": [],
-	"requests": [
+	"info": {
+		"_postman_id": "21bb9920-c97e-493a-b03f-3278b9e3f3bb",
+		"name": "addons.allizom.org",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "2333a108-8160-4353-9f9b-d5cdf24af446",
 			"name": "Statistics",
-			"url": "",
-			"description": "",
-			"data": null,
-			"dataMode": "params",
-			"headerData": [],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": [],
-			"folder": null,
-			"headers": "",
-			"pathVariables": {}
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "685af7c3-66cf-4189-9e18-a54053f8ba97",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "079e74ea-5e7f-4d07-9fe2-a0cd8abd3d65",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{MOZILLA_TOKEN}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://addons.allizom.org/api/v3/statistics/archive/max-tabs/2013/02",
+					"protocol": "https",
+					"host": [
+						"addons",
+						"allizom",
+						"org"
+					],
+					"path": [
+						"api",
+						"v3",
+						"statistics",
+						"archive",
+						"max-tabs",
+						"2013",
+						"02"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "42bad0cc-75f1-4a76-b131-4b18fbd679be",
 			"name": "getProfile",
-			"url": "",
-			"description": "",
-			"data": null,
-			"dataMode": "params",
-			"headerData": [],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": [],
-			"folder": null,
-			"headers": "",
-			"pathVariables": {}
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f3fa4be9-4c8a-44e1-ba73-2d2f8e487e2b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{MOZILLA_TOKEN}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://addons.allizom.org/api/v3/accounts/profile/",
+					"protocol": "https",
+					"host": [
+						"addons",
+						"allizom",
+						"org"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "aa43166c-9b6f-4881-acfe-dbf28cb5103d",
 			"name": "unlistedAddon",
-			"url": "",
-			"description": "",
-			"data": null,
-			"dataMode": "params",
-			"headerData": [],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [],
-			"auth": null,
-			"events": [],
-			"folder": null,
-			"headers": "",
-			"pathVariables": {}
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "493b7975-800b-4ceb-9b85-023ef4694918",
+						"type": "text/javascript",
+						"exec": [
+							"console.log(pm.response.text());",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorzation",
+						"value": "{{MOZILLA_TOKEN}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://addons.allizom.org/api/v3/addons/addon/tesasdf12341234t@palant.de",
+					"protocol": "https",
+					"host": [
+						"addons",
+						"allizom",
+						"org"
+					],
+					"path": [
+						"api",
+						"v3",
+						"addons",
+						"addon",
+						"tesasdf12341234t@palant.de"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

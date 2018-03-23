@@ -17,12 +17,12 @@ var token = jwt.sign(payload, secret, {
 newman.run({
   collection: require('./addons.allizom.org.postman_collection'),
   globals: {
-    "id": "856c0eaa-5138-d095-ab16-85ee57c35739",
-    "name": "Postman Globals",
+    "id": "146e52f0-fd32-4814-8e58-8a3c0f4d5eb7",
+    "name": "My Workspace Globals",
     "values": [
       {
         "key": "MOZILLA_TOKEN",
-        "value": token,
+        "value": "JWT " + token,
         "description": "",
         "type": "text",
         "enabled": true
