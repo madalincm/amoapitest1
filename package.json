@@ -1,0 +1,14 @@
+{
+  "name": "amoapitest",
+  "version": "1.0.0",
+  "description": "AMO API TESTING FRAMEWORK",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^3.9.3"
+  }
+}
