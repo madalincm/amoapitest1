@@ -1,0 +1,68 @@
+{
+	"id": "21bb9920-c97e-493a-b03f-3278b9e3f3bb",
+	"name": "addons.allizom.org",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"42bad0cc-75f1-4a76-b131-4b18fbd679be",
+		"aa43166c-9b6f-4881-acfe-dbf28cb5103d",
+		"2333a108-8160-4353-9f9b-d5cdf24af446"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "2333a108-8160-4353-9f9b-d5cdf24af446",
+			"name": "Statistics",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "42bad0cc-75f1-4a76-b131-4b18fbd679be",
+			"name": "getProfile",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "aa43166c-9b6f-4881-acfe-dbf28cb5103d",
+			"name": "unlistedAddon",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
