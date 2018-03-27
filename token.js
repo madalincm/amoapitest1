@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken');
 const users = require('./users.js');
 
-var generateToken = (perm) => {
+var generateToken = () => {
     var issuedAt = Math.floor(Date.now() / 1000);
     var payload = {
         iss: users.users.admin.iss,
