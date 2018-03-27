@@ -1,15 +1,15 @@
 var jwt = require('jsonwebtoken');
 const users = require('./users.js');
 
-var generateToken = () => {
+var generateToken = (perm) => {
     var issuedAt = Math.floor(Date.now() / 1000);
     var payload = {
-        iss: users.users[0].iss,
+        iss: users.users.admin.iss,
         jti: Math.random().toString(),
         iat: issuedAt,
         exp: issuedAt + 60,
     };
-    var secret = users.users[0].secret;  // store this securely.
+    var secret = users.users.admin.secret;  // store this securely.
     var token = jwt.sign(payload, secret, {
         algorithm: 'HS256',  // HMAC-SHA256 signing algorithm
     });
