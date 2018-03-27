@@ -2,7 +2,6 @@ var newman = require('newman');
 const token = require('./token.js');
 
 var generatedToken = token.generateToken();
-console.log("token from app.js", generatedToken);
 
 newman.run({
   collection: require('./addons.allizom.org.postman_collection'),
