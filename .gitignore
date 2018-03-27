@@ -6,7 +6,7 @@ ehthumbs.db
 Desktop.ini
 
 node_modules/
-.users.js
+users.js
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
