@@ -1,6 +1,5 @@
 var jwt = require('jsonwebtoken');
 const users = require('./users.js');
-console.log(users.users[0].iss);
 
 var generateToken = () => {
     var issuedAt = Math.floor(Date.now() / 1000);
