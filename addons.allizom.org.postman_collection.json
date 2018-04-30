@@ -11,12 +11,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "685af7c3-66cf-4189-9e18-a54053f8ba97",
+						"id": "be2298d0-0640-4f87-b21b-3b163455abf4",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
 						]
 					}
 				},
@@ -45,10 +51,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "https://addons.allizom.org/api/v3/statistics/archive/max-tabs/2013/02",
+					"raw": "https://addons-dev.allizom.org/api/v3/statistics/archive/max-tabs/2013/02",
 					"protocol": "https",
 					"host": [
-						"addons",
+						"addons-dev",
 						"allizom",
 						"org"
 					],
@@ -71,12 +77,15 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f3fa4be9-4c8a-44e1-ba73-2d2f8e487e2b",
+						"id": "3454ba31-e2b7-48b2-94cf-87d680486eb0",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							"",
+							"",
+							""
 						]
 					}
 				}
@@ -85,20 +94,20 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "{{MOZILLA_TOKEN}}"
-					},
-					{
 						"key": "Content-Type",
 						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{MOZILLA_TOKEN}}"
 					}
 				],
 				"body": {},
 				"url": {
-					"raw": "https://addons.allizom.org/api/v3/accounts/profile/",
+					"raw": "https://addons-dev.allizom.org/api/v3/accounts/profile/",
 					"protocol": "https",
 					"host": [
-						"addons",
+						"addons-dev",
 						"allizom",
 						"org"
 					],
@@ -145,10 +154,10 @@
 				],
 				"body": {},
 				"url": {
-					"raw": "https://addons.allizom.org/api/v3/addons/addon/tesasdf12341234t@palant.de",
+					"raw": "https://addons-dev.allizom.org/api/v3/addons/addon/tesasdf12341234t@palant.de",
 					"protocol": "https",
 					"host": [
-						"addons",
+						"addons-dev",
 						"allizom",
 						"org"
 					],
@@ -158,6 +167,109 @@
 						"addons",
 						"addon",
 						"tesasdf12341234t@palant.de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Collection",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3454ba31-e2b7-48b2-94cf-87d680486eb0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{MOZILLA_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://addons-dev.allizom.org/api/v3/accounts/account/madalintest/collections",
+					"protocol": "https",
+					"host": [
+						"addons-dev",
+						"allizom",
+						"org"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"account",
+						"madalintest",
+						"collections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Collection",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3454ba31-e2b7-48b2-94cf-87d680486eb0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{MOZILLA_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://addons-dev.allizom.org/api/v3/accounts/profile/",
+					"protocol": "https",
+					"host": [
+						"addons-dev",
+						"allizom",
+						"org"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"profile",
+						""
 					]
 				}
 			},
